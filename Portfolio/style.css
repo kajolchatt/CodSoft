@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    /* backdrop-filter: blur(500px); */
+    /* border: 1px solid black; */
+    display: flex; 
+    justify-content: space-between;
+    padding-top: 0.2em;
+    /* padding-left: 7.8em ;  */
+    font-size: 20px;
+    padding-right: 5em;
+    font-family: 'Mukta Malar', sans-serif;
+}
+.header::before{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding: 1.3rem;
+}
+ul li{
+    float: left;
+    list-style-type: none;
+}
+ul li a{
+    padding-top: 1em;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #B71375;
+    /* padding: 0.7em; */
+    transition: transform 2s;
+}
+.header >a{
+    padding-top: 1em;
+    padding-left: 5em ; 
+    padding-bottom: 0.8em;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #d60c90;
+    transition: transform 2s;
+    align-items: center;
+    justify-self: center;
+}
+.header a:hover{
+    color:#e20b97;
+    transform: scale(1.1,1.1);
+}
+
+.icons-menu{
+    position: absolute;
+    right: 5%;
+    top: 10px;
+    font-size: 2.8rem;
+    color: #990960;
+    display: none;
+}
+#check{
+    display: none;
+
+}
+.aboutme{
+    width: 100vw;
+    height:800px;
+    display: flex;
+    flex-direction: row;
+    background-image: linear-gradient(to left, #ffa8b3, #fdd8dc);
+    padding-left: 100px;
+    padding-right: 1px;
+    padding-bottom: 450px;
+    padding-top: 150px;
+    line-height: 90px;
+    font-family: 'Mukta Malar', sans-serif;
+    /* height: 100vh; */
+    width: 100%;
+    color: #c45a7f;
+    font-size: 30px;
+    
+}
+.body{
+    /* height: 100vh;
+    width: 100%;
+    color: #c45a7f;
+    font-size: 30px; */
+}
+.text{
+    color: #b3076e;
+}
+.about-me-box{
+    background-color: #d96890;
+    color: white;
+    text-align: center;
+    margin-top: 17px;
+    margin-bottom: 17px;
+    width:200px;
+    border-radius: 80px;
+    box-shadow: 1px 1px 15px #c45a7f;
+    transition: transform 2s;
+    
+}
+.about-me-box:hover{
+    cursor: pointer;
+    background-color: #B71375;
+    transform: scale(1.05,1.05);
+}
+.about-me-heading{
+    font-family: 'Mukta Malar', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 60px;
+    color: #d60c90;
+    font-weight: 130;
+}
+.girl{
+    float: right;
+    width:500px;
+}
+i:hover{
+    color: #990960;
+}
+.aboutme .icons{
+    padding: 10px;
+}
+
+@media screen and (max-width:1387px){
+    .aboutme{
+        font-size: 20px;
+    }
+    .girl{
+        width: 300px;
+    }
+    .about-me-box{
+        width:150px;
+    }
+}
+@media screen and (max-width:966px){
+    
+    .girl{
+        width: 300px;
+    }
+    .aboutme{
+        padding-top: 100px;
+        font-size: 16px;
+        line-height: 70px;
+        height: 600px;
+    }
+    .about-me-box{
+        width:130px;
+    }
+    .header >a{
+        padding-left: 100px;
+    }
+    ul li a{
+        padding-left: 9px;
+        padding-right: 10px;
+    }
+}
+@media screen and (max-width:877px) {
+    .girl{
+        width: 220px;
+        height: 220px;
+    }
+    .aboutme{
+        padding-left: 40px;
+        padding-top: 100px;
+        font-size: 16px;
+        line-height: 70px;
+        height: 600px;
+    }
+    .about-me-box{
+        width:110px;
+    }
+    .icons-menu{
+        display: inline-flex;
+    }
+    #check:checked~.icons-menu #menu-icon{
+        display: none;
+    }
+    .icons-menu #close-icon{
+        display: none;
+    }
+    #check:checked~.icons-menu #close-icon{
+        display: block;
+    }
+    ul{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 0;
+        width: 100%;
+        background-color: rgba(0,0,0,0.1);
+        backdrop-filter: blur(50px);
+        overflow-y: hidden;
+        transition: 0.3s ease;
+    }
+    #check:checked~ul{
+        height: 17.7rem;
+    }
+    .header >a{
+        padding-left:40px;
+    }
+    ul li a{
+        display: block;
+        padding: 15px;
+        text-align: center;
+    }
+    ul li{
+        float: none;
+    }
+    
+}
+
+@media screen and (max-width:750px) {
+    .aboutme{
+        font-size:14px;
+        line-height:65px;
+    }
+    
+    .header>a{
+        font-size: ;
+    }
+    .about-me-box{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:683px){
+    .girl{
+        width: 170px;
+        height: 170px;
+    }
+    .aboutme{
+        padding-left: 10px;
+    }
+}
+@media screen and (max-width:601) {
+    .aboutme{
+        display: flex;
+        flex-direction: column;
+    }
+    .about-me-box{
+        font-size: 3px;
+    }
+}
+
+@media screen and (max-width:474) {
+    .girl{
+        width: 90px;
+        height: 90px;
+    }
+    .header>a{
+        padding-left: 0px;
+    }
+    
+}

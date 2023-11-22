@@ -63,4 +63,5 @@ button {
 .operator {
     color: #687368;
     font-weight: bolder;
+    text-decoration: none;
 }

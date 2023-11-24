@@ -86,9 +86,10 @@ ul li a {
     display: none;
 
 }
-.main{
+
+.main {
     height: 100vh;
-    
+
     background-image: linear-gradient(to left, #ffb3bd, #fadade);
 }
 
@@ -150,6 +151,14 @@ ul li a {
     width: 500px;
 }
 
+.social-icon {
+    color: #c45a7f;
+}
+
+.social-icon:visited {
+    color: #c45a7f;
+}
+
 .icons i:hover {
     color: #990960;
 }
@@ -185,6 +194,7 @@ ul li a {
 
     background-color: #F9F5F6;
     height: 100vh;
+    font-size: 100%;
 }
 
 .me h1 {
@@ -194,13 +204,15 @@ ul li a {
     font-size: 45px;
     color: #c2368a;
 }
-.me img{
+
+.me img {
     color: #c2368a;
 }
 
-.bx-user{
+.bx-user {
     padding-top: 4px;
 }
+
 .my-img {
     opacity: 0.6;
     transition: transform 2s ease;
@@ -316,17 +328,21 @@ ul li a {
     /* margin-bottom:2px; */
 }
 
-.work-wrapper{
+.work-wrapper {
     background-color: #F9F5F6;
-    height: 900px;
+    /* height: 900px; */
+    height: 100vh;
 }
+
 .work {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    /* align-content: center; */
     gap: 25px;
 }
-.work-item{
+
+.work-item {
     background-color: #f8cce7;
     margin: 10px;
     width: 450px;
@@ -334,46 +350,129 @@ ul li a {
     text-align: center;
     border-radius: 25px;
 }
-.work-item:hover{
-    box-shadow:4px 9px 18px #b6207a;
+
+.work-item:hover {
+    box-shadow: 4px 9px 18px #b6207a;
 }
-.work-item h1{
+
+.work-item h1 {
     font-weight: 100;
     padding-top: 10px;
     font-size: 40px;
     padding-bottom: 2rem;
     color: #b6207a;
 }
-.work-wrapper> h1 {
+
+.work-wrapper>h1 {
     text-align: center;
     padding-top: 3rem;
     font-size: 45px;
     padding-bottom: 2rem;
     color: #b6207a;
 }
-.work-icon{
+
+.work-icon {
     padding-top: 25px;
 }
 
-.experience-wrapper h1{
+.experience-wrapper {
+    background-image: linear-gradient(to left, #ffb3bd, #fadade);
+    height: 100vh;
+
+    padding-bottom: 30px;
+}
+
+.experience-wrapper h1 {
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 3rem;
     font-size: 45px;
     padding-bottom: 2rem;
     color: #b6207a;
 }
-.experience{
+
+.experience {
+    background-color:#f9f1f2;
+    max-width: 60%;
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+    border-radius: 25px;
 }
-.experience-item{
-    background-color: #F9F5F6;
+
+.experience h1 {
+    font-weight: 200;
+}
+
+.experience p {
+    color: rgb(113, 113, 113);
+}
+
+.experience-item {
+    background-color: rgb(253, 222, 227);
+    margin: 20px;
+    font-size: 40px;
+    width: 500px;
+    text-align: center;
+    height: 250px;
+    border-radius: 25px;
 
 }
+
+.experience-item p {
+    font-size: 27px;
+}
+
+.experience-item:hover {
+    box-shadow: 2px 3px 12px rgb(236, 131, 166);
+}
+
+.footer {
+    /* background-color: #F9F5F6; */
+    display: flex;
+    flex-wrap: wrap;
+    height: 250px;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.footer-item {
+    padding: 30px;
+    font-size: 20px;
+    width: 300px;
+    color: #cc2188;
+
+}
+
+.footer-cnt {
+    display: flex;
+}
+
+.heart {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    /* padding-top:15%; */
+    /* background-color:#fdf7f8 */
+}
+
+.heart img {
+    height: 30px;
+}
+
+.heart h4 {
+    font-size: 23px;
+    padding-top: 4px;
+    color: #e951ac;
+    font-weight: 530;
+}
+
+
 
 @media screen and (max-width:1387px) {
     .aboutme {
-        font-size: 25px;
+        font-size: 35px;
+        padding-top: 15%;
     }
 
     .girl {
@@ -382,8 +481,10 @@ ul li a {
 
     .about-me-box {
         width: 150px;
+        font-size: 22px;
     }
-    .work-wrapper{
+
+    .work-wrapper {
         height: 1200px;
     }
 }
@@ -398,6 +499,11 @@ ul li a {
     }
 }
 
+@media screen and (max-width:1062px) {
+    .footer {
+        height: 400px;
+    }
+}
 
 @media screen and (max-width:1025px) {
     .skills {
@@ -407,6 +513,12 @@ ul li a {
     .skill-wrapper {
         height: 1400px;
     }
+
+    .aboutme {
+        padding-top: 10%;
+        font-size: 25px;
+    }
+
 }
 
 @media screen and (max-width:966px) {
@@ -416,8 +528,8 @@ ul li a {
     }
 
     .aboutme {
-        padding-top: 100px;
-        font-size: 22px;
+        padding-top: 25%;
+        font-size: 32px;
         line-height: 70px;
         height: 600px;
     }
@@ -445,8 +557,8 @@ ul li a {
 
     .aboutme {
         padding-left: 40px;
-        padding-top: 100px;
-        font-size: 20px;
+        padding-top: 20%;
+        font-size: 30px;
         line-height: 70px;
         height: 600px;
     }
@@ -535,15 +647,17 @@ ul li a {
 
 
 }
+
 @media screen and (max-width:950px) {
-    .work-wrapper{
+    .work-wrapper {
         height: 1800px;
 
     }
 }
+
 @media screen and (max-width:750px) {
     .aboutme {
-        font-size: 20px;
+        font-size: 23px;
         line-height: 65px;
     }
 
@@ -561,6 +675,13 @@ ul li a {
     }
 }
 
+@media screen and (max-width:685px) {
+    .footer {
+        height: 650px;
+    }
+
+}
+
 @media screen and (max-width:683px) {
     .girl {
         width: 170px;
@@ -568,8 +689,9 @@ ul li a {
     }
 
     .aboutme {
-        padding-left: 20px;
-        font-size: 17px;
+        padding-left: 30px;
+        font-size: 20px;
+        padding-top: 30%;
     }
 
     .header>a {
@@ -579,9 +701,30 @@ ul li a {
 
 }
 
+@media screen and (max-width:650px) {
+    .experience-item {
+        /* width: 250px; */
+        font-size: 25px;
+    }
+
+    .experience {
+        max-width: 90%;
+    }
+
+    .experience-wrapper {
+        height: auto;
+    }
+
+}
+
 @media screen and (max-width:528px) {
     .skills {
         margin: 20px 80px;
+    }
+
+    .aboutme {
+        padding-top: 40%;
+        font-size: ;
     }
 
 }
@@ -592,11 +735,12 @@ ul li a {
     }
 }
 
-@media screen and (max-width:480px){
-    .work-wrapper{
+@media screen and (max-width:480px) {
+    .work-wrapper {
         height: 1900px;
     }
 }
+
 @media screen and (max-width:474px) {
     .girl {
         width: 150px;
@@ -610,7 +754,8 @@ ul li a {
     .me {
         height: 1000px;
     }
-    .work-item{
+
+    .work-item {
         width: 400px;
         height: 300px;
     }
@@ -624,6 +769,12 @@ ul li a {
 
     .aboutme {
         height: 700px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .aboutme {
+        padding-top: 40%;
     }
 }
 

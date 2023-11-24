@@ -1,16 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.header{
+html {
+    scroll-behavior: smooth;
+}
+
+.header {
     position: fixed;
+    z-index: 1000;
     width: 100%;
     background-color: white;
     /* backdrop-filter: blur(500px); */
     /* border: 1px solid black; */
-    display: flex; 
+    display: flex;
     justify-content: space-between;
     padding-top: 0.2em;
     /* padding-left: 7.8em ;  */
@@ -18,18 +23,24 @@
     padding-right: 5em;
     font-family: 'Mukta Malar', sans-serif;
 }
-.header::before{
+
+.header::before {
     position: fixed;
-    top:0;
-    left:0;
-    width:100%;
+    top: 0;
+    left: 0;
+    width: 100%;
     padding: 1.3rem;
 }
-ul li{
+
+ul li {
     float: left;
     list-style-type: none;
+    animation: slideTop 1s ease forwards;
 }
-ul li a{
+
+
+
+ul li a {
     padding-top: 1em;
     padding-left: 1.2em;
     padding-right: 1.2em;
@@ -40,9 +51,12 @@ ul li a{
     /* padding: 0.7em; */
     transition: transform 2s;
 }
-.header >a{
+
+
+
+.header>a {
     padding-top: 1em;
-    padding-left: 5em ; 
+    padding-left: 5em;
     padding-bottom: 0.8em;
     text-decoration: none;
     font-weight: bolder;
@@ -50,13 +64,16 @@ ul li a{
     transition: transform 2s;
     align-items: center;
     justify-self: center;
-}
-.header a:hover{
-    color:#e20b97;
-    transform: scale(1.1,1.1);
+    animation: sideRight 1s ease forwards;
 }
 
-.icons-menu{
+
+.header a:hover {
+    color: #e20b97;
+    transform: scale(1.1, 1.1);
+}
+
+.icons-menu {
     position: absolute;
     right: 5%;
     top: 10px;
@@ -64,16 +81,22 @@ ul li a{
     color: #990960;
     display: none;
 }
-#check{
+
+#check {
     display: none;
 
 }
-.aboutme{
+.main{
+    height: 100vh;
+    
+    background-image: linear-gradient(to left, #ffb3bd, #fadade);
+}
+
+.aboutme {
     width: 100vw;
-    height:800px;
+    height: 100vh;
     display: flex;
     flex-direction: row;
-    background-image: linear-gradient(to left, #ffa8b3, #fdd8dc);
     padding-left: 100px;
     padding-right: 1px;
     padding-bottom: 450px;
@@ -84,35 +107,35 @@ ul li a{
     width: 100%;
     color: #c45a7f;
     font-size: 30px;
-    
+
 }
-.body{
-    /* height: 100vh;
-    width: 100%;
-    color: #c45a7f;
-    font-size: 30px; */
-}
-.text{
+
+.text {
     color: #b3076e;
 }
-.about-me-box{
+
+
+
+.about-me-box {
     background-color: #d96890;
     color: white;
     text-align: center;
     margin-top: 17px;
     margin-bottom: 17px;
-    width:200px;
+    width: 200px;
     border-radius: 80px;
     box-shadow: 1px 1px 15px #c45a7f;
     transition: transform 2s;
-    
+
 }
-.about-me-box:hover{
+
+.about-me-box:hover {
     cursor: pointer;
     background-color: #B71375;
-    transform: scale(1.05,1.05);
+    transform: scale(1.05, 1.05);
 }
-.about-me-heading{
+
+.about-me-heading {
     font-family: 'Mukta Malar', sans-serif;
     font-size: 30px;
     text-align: center;
@@ -121,144 +144,508 @@ ul li a{
     color: #d60c90;
     font-weight: 130;
 }
-.girl{
+
+.girl {
     float: right;
-    width:500px;
+    width: 500px;
 }
-i:hover{
+
+.icons i:hover {
     color: #990960;
 }
-.aboutme .icons{
+
+.aboutme .icons {
     padding: 10px;
 }
 
-@media screen and (max-width:1387px){
-    .aboutme{
-        font-size: 20px;
+.description {
+    max-width: 800px;
+    /* Centering the content horizontally */
+    /* margin: 0 auto;
+    justify-content: space-evenly; */
+    display: flex;
+    margin: auto;
+    gap: 3rem;
+    font-family: 'Mukta Malar', sans-serif;
+}
+
+.desc h2 {
+
+    color: #e65daf;
+    font-weight: 600;
+}
+
+.desc h3 {
+
+    color: #e89bc9;
+    font-weight: 100;
+}
+
+.me {
+
+    background-color: #F9F5F6;
+    height: 100vh;
+}
+
+.me h1 {
+    padding-top: 3rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 45px;
+    color: #c2368a;
+}
+.me img{
+    color: #c2368a;
+}
+
+.bx-user{
+    padding-top: 4px;
+}
+.my-img {
+    opacity: 0.6;
+    transition: transform 2s ease;
+}
+
+.my-img:hover {
+    opacity: 0.8;
+    transform: scale(1.1, 1.1);
+}
+
+.contact-me {
+    width: 100px;
+    background-color: rgb(255, 213, 220);
+    border-radius: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.contact-me a {
+    text-decoration: none;
+    color: #a81e71;
+}
+
+.contact-me:hover {
+    background-color: palevioletred;
+    box-shadow: 1px 1px 6px palevioletred;
+}
+
+.skill-wrapper h1 {
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 45px;
+    padding-bottom: 2rem;
+    color: #c2368a;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: white; */
+    background-color: #F9F5F6;
+    margin: 20px 120px;
+    border-radius: 15px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    position: relative;
+    z-index: 700;
+}
+
+.skill-wrapper {
+    background-image: linear-gradient(to left, #ffb3bd, #fadade);
+    height: 850px;
+
+}
+
+.grid-item {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    font-size: 60px;
+    height: 150px;
+    width: 230px;
+    margin: 10px 12px;
+
+}
+
+.grid-item h4 {
+    font-size: 27px;
+    color: rgb(252, 234, 234);
+    font-weight: 400;
+}
+
+.grid-item:hover {
+    background-color: black;
+    box-shadow: 4px 9px 18px rgb(25, 47, 25);
+}
+
+.bxl-react {
+    padding-top: 12px;
+    font-size: 80px;
+    color: rgb(88, 199, 255);
+}
+
+.bxl-html5 {
+    padding-top: 12px;
+    font-size: 80px;
+    color: rgb(255, 111, 0);
+}
+
+.bxl-css3 {
+    padding-top: 12px;
+    font-size: 80px;
+    color: rgb(88, 171, 255);
+
+}
+
+.bxl-javascript {
+    padding-top: 12px;
+    font-size: 80px;
+    color: rgb(231, 214, 81);
+
+}
+
+.bxl-mongodb {
+    padding-top: 12px;
+    font-size: 80px;
+    color: rgb(62, 202, 57)
+}
+
+.skill-icon {
+    margin-top: 16px;
+    /* margin-bottom:2px; */
+}
+
+.work-wrapper{
+    background-color: #F9F5F6;
+    height: 900px;
+}
+.work {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+.work-item{
+    background-color: #f8cce7;
+    margin: 10px;
+    width: 450px;
+    height: 280px;
+    text-align: center;
+    border-radius: 25px;
+}
+.work-item:hover{
+    box-shadow:4px 9px 18px #b6207a;
+}
+.work-item h1{
+    font-weight: 100;
+    padding-top: 10px;
+    font-size: 40px;
+    padding-bottom: 2rem;
+    color: #b6207a;
+}
+.work-wrapper> h1 {
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 45px;
+    padding-bottom: 2rem;
+    color: #b6207a;
+}
+.work-icon{
+    padding-top: 25px;
+}
+
+.experience-wrapper h1{
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 45px;
+    padding-bottom: 2rem;
+    color: #b6207a;
+}
+.experience{
+    display: flex;
+    flex-wrap: wrap;
+}
+.experience-item{
+    background-color: #F9F5F6;
+
+}
+
+@media screen and (max-width:1387px) {
+    .aboutme {
+        font-size: 25px;
     }
-    .girl{
+
+    .girl {
         width: 300px;
     }
-    .about-me-box{
-        width:150px;
+
+    .about-me-box {
+        width: 150px;
+    }
+    .work-wrapper{
+        height: 1200px;
     }
 }
-@media screen and (max-width:966px){
-    
-    .girl{
+
+@media screen and (max-width:1255px) {
+    .skills {
+        height: 800px;
+    }
+
+    .skill-wrapper {
+        height: 1000px;
+    }
+}
+
+
+@media screen and (max-width:1025px) {
+    .skills {
+        height: 1200px;
+    }
+
+    .skill-wrapper {
+        height: 1400px;
+    }
+}
+
+@media screen and (max-width:966px) {
+
+    .girl {
         width: 300px;
     }
-    .aboutme{
+
+    .aboutme {
         padding-top: 100px;
-        font-size: 16px;
+        font-size: 22px;
         line-height: 70px;
         height: 600px;
     }
-    .about-me-box{
-        width:130px;
+
+    .about-me-box {
+        width: 130px;
+        font-size: 16px;
     }
-    .header >a{
+
+    .header>a {
         padding-left: 100px;
     }
-    ul li a{
+
+    ul li a {
         padding-left: 9px;
         padding-right: 10px;
     }
 }
+
 @media screen and (max-width:877px) {
-    .girl{
+    .girl {
         width: 220px;
         height: 220px;
     }
-    .aboutme{
+
+    .aboutme {
         padding-left: 40px;
         padding-top: 100px;
-        font-size: 16px;
+        font-size: 20px;
         line-height: 70px;
         height: 600px;
     }
-    .about-me-box{
-        width:110px;
+
+    .about-me-box {
+        width: 110px;
+        font-size: 16px;
     }
-    .icons-menu{
+
+    .icons-menu {
         display: inline-flex;
     }
-    #check:checked~.icons-menu #menu-icon{
+
+    #check:checked~.icons-menu #menu-icon {
         display: none;
     }
-    .icons-menu #close-icon{
+
+    .icons-menu #close-icon {
         display: none;
     }
-    #check:checked~.icons-menu #close-icon{
+
+    #check:checked~.icons-menu #close-icon {
         display: block;
     }
-    ul{
+
+    ul {
         position: absolute;
         top: 100%;
         left: 0;
         height: 0;
         width: 100%;
-        background-color: rgba(0,0,0,0.1);
+        background-color: rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(50px);
         overflow-y: hidden;
         transition: 0.3s ease;
     }
-    #check:checked~ul{
+
+    #check:checked~ul {
         height: 17.7rem;
     }
-    .header >a{
-        padding-left:40px;
+
+    .header>a {
+        padding-left: 40px;
     }
-    ul li a{
+
+    ul li a {
         display: block;
         padding: 15px;
         text-align: center;
     }
-    ul li{
+
+    ul li {
         float: none;
     }
-    
+
+    .description {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .me {
+        height: 800px;
+    }
+
+    .desc h2 {
+        text-align: center;
+    }
+
+    .desc h3 {
+        text-align: center;
+    }
+
+    .desc p {
+        padding: 0px 30px;
+    }
+
+    .description img {
+        height: 250px;
+        width: 250px;
+    }
+
+    .contact-me {
+        margin-left: 30px;
+    }
+
+
+}
+@media screen and (max-width:950px) {
+    .work-wrapper{
+        height: 1800px;
+
+    }
+}
+@media screen and (max-width:750px) {
+    .aboutme {
+        font-size: 20px;
+        line-height: 65px;
+    }
+
+
+    .about-me-box {
+        font-size: 14px;
+    }
+
+    .skills {
+        height: 2350px;
+    }
+
+    .skill-wrapper {
+        height: 2600px;
+    }
 }
 
-@media screen and (max-width:750px) {
-    .aboutme{
-        font-size:14px;
-        line-height:65px;
-    }
-    
-    .header>a{
-        font-size: ;
-    }
-    .about-me-box{
-        font-size: 12px;
-    }
-}
-@media screen and (max-width:683px){
-    .girl{
+@media screen and (max-width:683px) {
+    .girl {
         width: 170px;
         height: 170px;
     }
-    .aboutme{
-        padding-left: 10px;
+
+    .aboutme {
+        padding-left: 20px;
+        font-size: 17px;
     }
+
+    .header>a {
+        padding-left: 20px;
+    }
+
+
 }
-@media screen and (max-width:601) {
-    .aboutme{
-        display: flex;
-        flex-direction: column;
+
+@media screen and (max-width:528px) {
+    .skills {
+        margin: 20px 80px;
     }
-    .about-me-box{
-        font-size: 3px;
+
+}
+
+@media screen and (max-width:517px) {
+    .me {
+        height: 900px;
     }
 }
 
-@media screen and (max-width:474) {
-    .girl{
-        width: 90px;
-        height: 90px;
+@media screen and (max-width:480px){
+    .work-wrapper{
+        height: 1900px;
     }
-    .header>a{
-        padding-left: 0px;
+}
+@media screen and (max-width:474px) {
+    .girl {
+        width: 150px;
+        height: 150px;
     }
-    
+
+    .header>a {
+        padding-left: 20px;
+    }
+
+    .me {
+        height: 1000px;
+    }
+    .work-item{
+        width: 400px;
+        height: 300px;
+    }
+
+}
+
+@media screen and (max-width:427px) {
+    .skills {
+        margin: 20px 40px;
+    }
+
+    .aboutme {
+        height: 700px;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(70px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes sideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }

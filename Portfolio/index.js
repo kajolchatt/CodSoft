@@ -1,6 +1,6 @@
 var typed=new Typed(".text",
 {
-    strings:["Frontend Development","Web Development"],
+    strings:["Web Development","Frontend Development","Web Designing"],
     typeSpeed:90,
     backSpeed:90,
     backDelay:1000,

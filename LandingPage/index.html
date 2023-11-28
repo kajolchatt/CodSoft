@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 
 <body>
     <div class="container">
-        <div class="navbar">
+        <div class="navbar" data-aos="fade-down" data-aos-duration="2000">
             <img src="Urban Fashion Img/logo.png" class="logo">
             <nav>
                 <ul>
@@ -24,14 +26,14 @@
         </div>
         <div class="content">
             <div>
-                <a href="" class="btn">2023 collections</a>
-                <h1>You should always<br> feel pretty</h1>
-                <p>Clothes that are sure to heat up your winter</p>
+                <a href="" data-aos="fade-down" data-aos-duration="3000" class="btn">2023 collections</a>
+                <h1 data-aos="fade-right" data-aos-duration="2000">You should always<br> feel pretty</h1>
+                <p data-aos="fade-left" data-aos-duration="2000">Clothes that are sure to heat up your winter</p>
 
             </div>
             <div class="arrow-icons">
-                <img src="Urban Fashion Img/back-arrow.png" alt="">
-                <img src="Urban Fashion Img/next-arrow.png" alt="">
+                <img src="Urban Fashion Img/back-arrow.png" class="arrow-btn">
+                <img src="Urban Fashion Img/next-arrow.png" class="arrow-btn">
 
             </div>
             <div class="feature-image">
@@ -45,6 +47,10 @@
             <a href="">TWITTER</a>
         </div>
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 

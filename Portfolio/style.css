@@ -362,6 +362,10 @@ ul li a {
     padding-bottom: 2rem;
     color: #b6207a;
 }
+.work-item a{
+    color: #b6207a;
+    text-decoration:none;
+}
 
 .work-wrapper>h1 {
     text-align: center;
